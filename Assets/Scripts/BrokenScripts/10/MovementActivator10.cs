@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementActivator10 : MonoBehaviour
 {
     [SerializeField] GameObject objectToActivate;
-    GameObject otherObjectToActivate;
+    [SerializeField] GameObject otherObjectToActivate; //need this to determine which other gameObject to activate, so that both move when triggered. 
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +20,12 @@ public class MovementActivator10 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        objectToActivate.GetComponent<MoveObject9>().enabled = true;
-        otherObjectToActivate.GetComponent<MoveObject9>().enabled = true;
+        objectToActivate.GetComponent<MoveObject10>().enabled = true;  //needed to change all of these to use MoveObject10 objects, as they would be trying to read from an object that doesn't exist within the scope of the scene. 
+        otherObjectToActivate.GetComponent<MoveObject10>().enabled = true;
     }
     private void OnTriggerExit(Collider other)
     {
-        objectToActivate.GetComponent<MoveObject9>().enabled = true;
-        otherObjectToActivate.GetComponent<MoveObject9>().enabled = true;
+        objectToActivate.GetComponent<MoveObject10>().enabled = true;
+        otherObjectToActivate.GetComponent<MoveObject10>().enabled = true; 
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -657,8 +657,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379b3bef452e479408dbcacc23450d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  moveDirection: {x: 0, y: 0, z: 0}
+  moveSpeed: 0.01
+  moveDirection: {x: 1, y: 0, z: 0}
 --- !u!1 &873342070
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,8 +803,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1560bdea157df44ad57c39669302bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToActivate: {fileID: 0}
-  otherObjectToActivate: {fileID: 0}
+  objectToActivate: {fileID: 1866744267}
+  otherObjectToActivate: {fileID: 853260693}
 --- !u!4 &955719829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
@@ -1590,6 +1590,7 @@ GameObject:
   - component: {fileID: 1866744271}
   - component: {fileID: 1866744270}
   - component: {fileID: 1866744269}
+  - component: {fileID: 1866744272}
   m_Layer: 0
   m_Name: DoorLeft
   m_TagString: Untagged
@@ -1675,3 +1676,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866744267}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1866744272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866744267}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379b3bef452e479408dbcacc23450d26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.01
+  moveDirection: {x: -1, y: 0, z: 0}

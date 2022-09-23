@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveObject7 : MonoBehaviour
 {
-    float moveSpeed;
+    [SerializeField] float moveSpeed; //need to serialize this field in order for the doors to move at a set speed that we choose, else they don't move at all
     [SerializeField] Vector3 moveDirection;
 
     float totalMoveDistance;

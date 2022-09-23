@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementActivator9 : MonoBehaviour
 {
     [SerializeField] GameObject objectToActivate;
-    GameObject otherObjectToActivate;
+    [SerializeField] GameObject otherObjectToActivate; //need to serialize this so that this trigger activates BOTH doors. 
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +18,12 @@ public class MovementActivator9 : MonoBehaviour
         
     }
 
-    private void onTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         objectToActivate.GetComponent<MoveObject9>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject9>().enabled = true;
     }
-    private void pnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other) //change from pnTriggerExit to OnTriggerExit so trigger knows what function to look at
     {
         objectToActivate.GetComponent<MoveObject9>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject9>().enabled = true;
